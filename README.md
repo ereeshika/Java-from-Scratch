@@ -2,7 +2,7 @@
 
 Java is one of the widely used programming languages in the world.
 
-## Lesson 01
+## Lesson 01 (Basic Intro)
 
 1. Applications including,
    - Web Applications
@@ -42,3 +42,22 @@ foo@bar:~ javac filename.java
 ```console
 foo@bar:~ java filename
 ```
+
+## Lesson 02 (Data Types)
+
+1. Information which is stored and processed by a computer can be considered as data.
+2. Data Types are classification of data which instructs the compiler/interpreter about the intended use of that data. There are two main classification of dta types :
+   - Primitive Data Types (Boolean, int, double, char)
+   - Reference Data Types
+3. Variables are reusable containers for different types of data. It has a data type, label, and a value.
+```java
+public class Main {
+   public static void main(String[] args) {
+      int label = 25;
+   }
+}
+```
+
+## Lesson 03 (Inputs and Outputs)
+
+1. To take inputs first we need to import java.util.Scanner class.
