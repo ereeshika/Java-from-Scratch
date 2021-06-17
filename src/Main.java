@@ -2,52 +2,32 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        int studentAge;
-        double studentGPA;
-        String studentFirstName;
-        String studentLastName;
-        char hasPerfectAttendance;
-        char likeToAnswer;
-        boolean continueProgram = false;
+        String question = "Which architectural style goal is to achieve Integrability?";
+        String choiceOne = "Data Flow Architecture";
+        String choiceTwo = "Call and Return Architecture";
+        String choiceThree = "Data Centered Architectures";
+
+        String correctAnswer = choiceThree;
+
         Scanner input = new Scanner(System.in);
 
-        while(!continueProgram){
-        System.out.println("Please tell me your first name :");
-        studentFirstName = input.next();
+        boolean refresh = true;
 
-        System.out.println("Please tell me your last name :");
-        studentLastName = input.next();
+        while(refresh){
+            System.out.println(question);
+            System.out.println(choiceOne + ", " + choiceTwo +" or " + choiceThree);
+            String answer = input.nextLine();
 
-        System.out.println("Hello "+studentFirstName+" "+studentLastName+" can I ask few questions from you? if yes press 'y' else press 'n' to exit");
-        likeToAnswer = input.next().charAt(0);
-
-        if(likeToAnswer=='y'){
-            System.out.println("Hello "+studentFirstName+" "+studentLastName+" how old are you ?");
-            studentAge = input.nextInt();
-
-            System.out.println("Hello "+studentFirstName+" "+studentLastName+" what is your GPA ?");
-            studentGPA = input.nextDouble();
-
-            System.out.println("Did you maintain perfect attendance ? if yes press 'y' else press 'n'");
-            hasPerfectAttendance = input.next().charAt(0);
-
-            char studentFirstInitial = studentFirstName.charAt(0);
-            char studentLastInitial = studentLastName.charAt(0);
-
-            if(hasPerfectAttendance == 'y'){
-                System.out.println(studentFirstInitial+"."+studentLastInitial+" is a "+studentAge+" years old student with "+studentGPA+" GPA. He also has perfect attendance too.");
+            if (correctAnswer.equals(answer)) {
+                System.out.println("Congratulations !! your answer is correct");
+                refresh = false;
+            }
+            else if (choiceOne.equals(answer)){
+                System.out.println("Your answer was "+choiceOne+". It is not hte correct answer. Please try again.");
             }
             else{
-                System.out.println(studentFirstInitial+"."+studentLastInitial+" is a "+studentAge+" years old student with "+studentGPA+" GPA. Even his attendance is not perfect");
+                System.out.println("Your answer was "+choiceTwo+". It is not the correct answer. Please try again.");
             }
-            continueProgram = true;
-        }else if (likeToAnswer=='n'){
-            System.out.println("Thank you and Good bye !!");
-            continueProgram = true;
-        }
-        else{
-            System.out.println("Invalid input please try again");
-        }
         }
     }
 }

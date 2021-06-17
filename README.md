@@ -78,3 +78,7 @@ public class Main {
    }
 }
 ```
+
+## Lesson 04 (Control Flow)
+
+1. Control flow is the order, which decides when program instructions and code statements needs to be executed.
