@@ -62,7 +62,6 @@ public class Main {
 
 1. To take inputs first we need to import java.util.Scanner class.
 2. Then it is required to define an input object to read the input and assign it to a variable.
-3.
 ```java
 import java.util.Scanner;
 
